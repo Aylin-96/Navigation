@@ -9,8 +9,8 @@ export const TabNavigator = () => {
     return(
         <Tab.Navigator //initialRouteName='Chats'
             tabBarOptions={{activeTintColor: 'black', inactiveTintColor: 'dimgray',
-            style: { backgroundColor: '#57e6ff', height: 45},
-            labelStyle: { fontSize: 23}}}>
+            style: { backgroundColor: '#57e6ff', height: 40},
+            labelStyle: { fontSize: 22}}}>
             <Tab.Screen name="Profile" component={ProfileScreen}/>
             <Tab.Screen name="Chats" component={ChatScreen}/>
             <Tab.Screen name="About Me" component={AboutScreen}/>
