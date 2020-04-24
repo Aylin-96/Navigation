@@ -50,7 +50,7 @@ const ChatScreen = () => {
 
 const styles = StyleSheet.create({
   chats: {
-    paddingLeft: 15,
+    paddingLeft: 10,
     height: h/2,
     justifyContent: 'space-around'
   },
