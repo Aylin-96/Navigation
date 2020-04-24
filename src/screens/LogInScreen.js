@@ -11,7 +11,7 @@ const LogInScreen = ({ navigation }) => {
                 source={require('../images/mrn.jpeg')}
             />
             <View style={{flexDirection: "row"}}>
-                <Text style={password}>Username:</Text>
+                <Text style={password}>Username</Text>
                 <Text style={text}>{username}</Text>
             </View>
             <View style={{
@@ -19,7 +19,7 @@ const LogInScreen = ({ navigation }) => {
                 paddingTop: 10
                 }}
             >
-                <Text style={password}>Password:</Text>
+                <Text style={password}>Password</Text>
                 <Text style={text}>*********</Text>
             </View>
             <TouchableOpacity
