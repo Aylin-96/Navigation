@@ -7,12 +7,12 @@ const ProfileScreen = ({route}) => {
         <View style={{flex: 1, backgroundColor: '#212121'}}>
             <View style={chat}>
                 <Image
-                    style={{height: 100, width: 100}}
+                    style={{height: 100, width: 100, borderRadius: 400/2}}
                     source={require('../images/my_photo.jpeg')}
                 />
                 <View>
                     <Text style={name}>Username: {route.params.username}</Text>
-                    <Text style={name}>Number: +994505026906</Text>
+                    <Text style={name}>Number: 0505026906</Text>
                     <Text style={name}>Status: Online</Text>
                 </View>
             </View>
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
       name: {
         textAlign: 'left',
         fontSize: 25,
-        color: 'aliceblue'
+        color: 'gray'
     }
 })
 
