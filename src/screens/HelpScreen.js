@@ -1,11 +1,11 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
-const StatusScreen = () => {
+const HelpScreen = () => {
     const {info} = styles
     return(
         <View style={info}>
-            <Text style={{color: '#57e6ff', fontSize: 30}}>Online</Text>
+            <Text style={{color: '#57e6ff', fontSize: 30}}>Help</Text>
         </View>
     )
 }
@@ -19,4 +19,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export { StatusScreen }
+export { HelpScreen }

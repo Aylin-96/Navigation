@@ -1,21 +1,23 @@
 import React from 'react'
 import { createDrawerNavigator } from '@react-navigation/drawer'
-import { UsernameScreen } from '../screens/UsernameScreen'
-import { PhotoScreen } from '../screens/PhotoScreen'
-import { ProfileScreen } from '../screens/ProfileScreen'
+import { UsernameScreen, PhotoScreen, StatusScreen, HelpScreen, AdvancedScreen, LogOutScreen, SettingsScreen } from '../screens'
 
 const Drawer = createDrawerNavigator();
-export const toggleMenu = () => {
-    navigation.toggleDrawer()
-}
-const MyDrawer = () => {
+
+const DrawerNavigator = () => {
     return (
-        <Drawer.Navigator>
-        <Drawer.Screen name="My Username" component={UsernameScreen} /> 
-        <Drawer.Screen name="My Photo" component={PhotoScreen} />
-        <Drawer.Screen name="My Profile" component={ProfileScreen} />
+        <Drawer.Navigator drawerStyle={{
+          backgroundColor: '#57e6ff',
+        }}>
+          <Drawer.Screen name="Settings Menu" component={SettingsScreen} />
+          <Drawer.Screen name="My Username" component={UsernameScreen} /> 
+          <Drawer.Screen name="My Photo" component={PhotoScreen} />
+          <Drawer.Screen name="My Status" component={StatusScreen} />
+          <Drawer.Screen name="Help" component={HelpScreen} />
+          <Drawer.Screen name="Advanced Settings" component={AdvancedScreen} />
+          <Drawer.Screen name="Log Out" component={LogOutScreen} />
         </Drawer.Navigator>
       )
 }
 
-export default MyDrawer
+export default DrawerNavigator

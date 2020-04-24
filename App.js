@@ -1,13 +1,8 @@
-import 'react-native-gesture-handler';
 import React, { Component } from 'react'
-import { View, Image, Text, StyleSheet, Dimensions } from 'react-native'
-import {NavigationContainer} from '@react-navigation/native';
+import { View, StyleSheet } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native';
 import Header from './src/components/Header'
-import {MyStack} from './src/navigation/Stack'
-import { MyTab } from './src/navigation/Tab'
-import ChatScreen from './src/screens/ChatScreen'
-import StatusScreen from './src/screens/StatusScreen'
-import ProfileScreen from './src/screens/ProfileScreen'
+import { StackNavigator } from './src/navigation/Stack'
 
 export default class App extends Component{
   render() {
@@ -16,7 +11,7 @@ export default class App extends Component{
       <View style={container}>
         <Header/>
         <NavigationContainer>
-          <MyTab/>
+          <StackNavigator/>
         </NavigationContainer>
       </View>
     )

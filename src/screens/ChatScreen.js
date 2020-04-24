@@ -1,6 +1,5 @@
 import React from 'react'
 import { View, Image, Text, StyleSheet, Dimensions } from 'react-native'
-import { MyTab } from '../navigation/Tab'
 
 const win = Dimensions.get ('window')
 const h = win.height
@@ -73,4 +72,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default ChatScreen
+export { ChatScreen }

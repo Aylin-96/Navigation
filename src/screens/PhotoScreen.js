@@ -1,12 +1,12 @@
 import React from 'react'
-import { View, StyleSheet } from 'react-native'
+import { View, Image, StyleSheet } from 'react-native'
 
 const PhotoScreen = () => {
     const {info} = styles
     return(
         <View style={info}>
             <Image
-                style={{height: 70, weight: 70}}
+                style={{width: 400, height: 400}}
                 source={require('../images/my_photo.jpeg')}
             />
         </View>
@@ -21,4 +21,4 @@ const styles = StyleSheet.create({
         backgroundColor: '#212121'
     }
 })
-export default PhotoScreen
+export { PhotoScreen }

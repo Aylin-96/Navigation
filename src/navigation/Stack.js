@@ -1,17 +1,21 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
-import ProfileScreen from '../screens/ProfileScreen'
-import ChatScreen from '../screens/ChatScreen'
-import { NavigationContainer } from '@react-navigation/native'
+import { LogInScreen } from '../screens'
+import { TabNavigator } from './Tab'
 
 const Stack = createStackNavigator()
 
-export const MyStack = () => {
+export const StackNavigator = () => {
     return(
-        <Stack.Navigator>
-            <Stack.Screen name="Profile" component={ProfileScreen} />
-            <Stack.Screen name="Chats" component={ChatScreen}
-                options={{headerMode: 'none'}} />
+        <Stack.Navigator
+            screenOptions={{
+                headerTintColor: '#57e6ff',
+                headerTitleAlign: 'center',
+                headerStyle: { backgroundColor: '#212121' }}}>
+            <Stack.Screen name="Log In" component={LogInScreen} />
+            <Stack.Screen name="Tab" component={TabNavigator}
+                options={{headerShown: false}}
+            />
         </Stack.Navigator>
     )
 }

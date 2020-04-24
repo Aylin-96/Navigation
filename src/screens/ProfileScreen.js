@@ -1,62 +1,38 @@
 import React from 'react'
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
-import Chatscreen from './ChatScreen'
-import { NavigationContainer } from '@react-navigation/native'
-import { MyTab } from '../navigation/Tab'
-//import { TouchableOpacity } from 'react-native-gesture-handler'
+import { View, Text, Image, StyleSheet } from 'react-native'
 
-const ProfileScreen = ({ navigation }) => {
-    const { profile, number, text, btn } = styles
+const ProfileScreen = ({route}) => {
+    const { name, chat} = styles
     return(
-        <View style={profile}>
-            <View style={{flexDirection: "row"}}>
-                <Text style={number}>Number:</Text>
-                <Text style={text}>+994505026906</Text>
+        <View style={{flex: 1, backgroundColor: '#212121'}}>
+            <View style={chat}>
+                <Image
+                    style={{height: 100, width: 100}}
+                    source={require('../images/my_photo.jpeg')}
+                />
+                <View>
+                    <Text style={name}>Username: {route.params.username}</Text>
+                    <Text style={name}>Number: +994505026906</Text>
+                    <Text style={name}>Status: Online</Text>
+                </View>
             </View>
-            <View style={{
-                flexDirection: "row",
-                paddingTop: 10
-                }}
-            >
-                <Text style={number}>Code:</Text>
-                <Text style={text}>****</Text>
-            </View>
-            <TouchableOpacity
-                style={btn}
-                onPress={() => navigation.navigate('Chats')}
-            >
-                <Text style={{fontSize: 27, fontWeight: 'bold'}}>Log In</Text>
-            </TouchableOpacity>
         </View>
     )
+
 }
 
 const styles = StyleSheet.create({
-    profile: {
-        flex: 1,
-        justifyContent: 'center',
+    chat: {
+        flexDirection: 'row',
         alignItems: 'center',
-    },
-    number: {
-        //backgroundColor: '#57e6ff',
-        fontSize: 25,
-        width: '25%',
+        justifyContent: 'space-around',
+        marginTop: 25
+      },
+      name: {
         textAlign: 'left',
-        color: '#57e6ff'
-    },
-    text: {
-        width: '50%',
-        paddingLeft: 20,
         fontSize: 25,
-        color: '#57e6ff'
-    },
-    btn: {
-        marginTop: 35,
-        width: '23%',
-        height: 40,
-        backgroundColor: '#57e6ff',
-        alignItems: 'center'
+        color: 'aliceblue'
     }
 })
 
-export default ProfileScreen
+export { ProfileScreen }

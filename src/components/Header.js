@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         height: h/8,
         backgroundColor: '#57e6ff',
         justifyContent: 'center',
-        paddingLeft: 10
+        paddingLeft: 25
     },
     headerText: {
         textAlign: 'left',

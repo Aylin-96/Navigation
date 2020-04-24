@@ -1,14 +1,11 @@
 import React from 'react'
-import { View, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 
 const LogOutScreen = () => {
     const {info} = styles
     return(
         <View style={info}>
-            <Image
-                style={{height: 70, weight: 70}}
-                source={require('../images/my_photo.jpeg')}
-            />
+            <Text style={{color: '#57e6ff', fontSize: 30}}>Log Out</Text>
         </View>
     )
 }
@@ -18,7 +15,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#212121'
+        backgroundColor: '#212121',
     }
 })
-export default LogOutScreen
+export { LogOutScreen }
